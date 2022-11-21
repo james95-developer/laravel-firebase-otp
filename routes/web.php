@@ -28,6 +28,7 @@ Route::get('/home', function () {
 Route::get('phone-auth', [PhoneAuthController::class, 'index']);
 
 Route::get('otp', [FirebaseController::class, 'otp'])->name('otp');
+Route::get('otp/verify', [FirebaseController::class, 'verify'])->name('verify');
 
 
 

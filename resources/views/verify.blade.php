@@ -11,22 +11,21 @@
     </head>
 <body>  
     <div class="container">
-        <h1 class="text-center m-3">Phone Number Authentication</h1>
+        <h1 class="text-center m-3">Phone number authentication</h1>
         <div class="alert alert-danger hide" id="error-message"></div>
         <div class="alert alert-success hide" id="sent-message"></div>
-        <div class="card">
+        
+        <div class="card mt-3">
             <div class="card-body">
                 <form>
                     <div class="mb-3">
-                        <label for="phone-number" class="form-label">Phone Number:</label>
-                        <input type="text" id="phone-number" class="form-control" placeholder="+254XXXXXXXXXX">
+                        <label for="otp-code" class="form-label">OTP code:</label>
+                        <input type="text" id="otp-code" class="form-control" placeholder="Enter OTP Code">
                     </div>
-                    <div id="recaptcha-container"></div>
-                    <button type="button" class="btn btn-info" onclick="otpSend();"><a href="{{url('otp/verify')}}">Send OTP</a></button>
+                    <button type="button" class="btn btn-info" onclick="otpVerify();">Verify OTP</button>
                 </form>
             </div>
         </div>
-        
     </div>  
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>

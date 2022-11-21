@@ -15,4 +15,7 @@ class FirebaseController extends Controller
     {
         return view('otp');
     }
+    public function verify(){
+        return view('verify');
+    }
 }
